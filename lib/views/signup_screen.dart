@@ -76,6 +76,7 @@ class SignUpScreen extends StatelessWidget  {
       _nameController.text.trim(),
       _emailController.text.trim(),
       _passwordController.text.trim(),
+        context,  // Add context as the 4th argument
     );
     if (user != null) {
       Navigator.pushReplacementNamed(context, '/home');
