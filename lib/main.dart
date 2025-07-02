@@ -7,7 +7,7 @@ import 'package:online_donation_app/views/onboarding_screen1.dart';
 import 'package:online_donation_app/views/onboarding_screen2.dart';
 import 'package:online_donation_app/views/signin_screen.dart';
 import 'package:online_donation_app/views/signup_screen.dart';
-import 'package:provider/provider.dart';  // Import the provider package
+import 'package:provider/provider.dart'; 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +15,7 @@ void main() async {
    bool isOnboardingDone = await LocalStorageService.isOnboardingDone();
   runApp(MyApp(isOnboardingDone: isOnboardingDone));
 }
-  // runApp(MyApp());
-//}
+
 
 class MyApp extends StatelessWidget {
    final bool isOnboardingDone;

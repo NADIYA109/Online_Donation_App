@@ -78,7 +78,6 @@ class OnboardingScreen1 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 40),
-              // First Sentence - Bold, Dark Black, Larger Font
               Text(
                 "Your small act can make a big difference. Donate today.",
                 textAlign: TextAlign.center,
@@ -89,7 +88,7 @@ class OnboardingScreen1 extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-              // Second Sentence - Less Bold, Lighter Black, Smaller Font
+              
               Text(
                 "Join us in creating positive change, one helping hand at a time.",
                 textAlign: TextAlign.center,
