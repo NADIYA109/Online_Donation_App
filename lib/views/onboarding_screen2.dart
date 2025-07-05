@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_donation_app/services/local_storage_service.dart';
 import 'package:online_donation_app/views/signin_screen.dart';
-import 'package:online_donation_app/views/signup_screen.dart';
-import 'home_screen.dart';
 
 class OnboardingScreen2 extends StatelessWidget {
   @override

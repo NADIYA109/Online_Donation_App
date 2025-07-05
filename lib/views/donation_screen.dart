@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:online_donation_app/views/payment_methods_screen.dart';
+import 'package:online_donation_app/views/payment_screen.dart';
 
 class DonationFormScreen extends StatefulWidget {
   final String category;
@@ -155,7 +155,7 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
                      if (_formKey.currentState!.validate()) {
                       Navigator.push(
                         context,MaterialPageRoute(
-                           builder: (_) => PaymentMethodScreen(
+                           builder: (_) => PaymentScreen(
                              name: _nameController.text,
                               email: _emailController.text,
                                phone: _phoneController.text,

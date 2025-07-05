@@ -1,112 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'donation_form_screen.dart';
-
-// class CategoryDetailsScreen extends StatelessWidget {
-//   final String category;
-
-//   CategoryDetailsScreen({required this.category});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("$category",
-//               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
-//       ),
-//       // body: Padding(
-//       //   padding: const EdgeInsets.all(16.0),
-//       //   child: Column(
-//       //     crossAxisAlignment: CrossAxisAlignment.start,
-//       //     children: [
-//       //       Text(
-//       //         "$category",
-//       //         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-//       //       ),
-//       //       SizedBox(height: 10),
-//             // Text(
-//             //   "Details about $category and how your donations can help.",
-//             //   style: TextStyle(fontSize: 16),
-//             // ),
-//             Spacer(),
-//             SizedBox(
-//               width: double.infinity,
-//               child: ElevatedButton(
-//                 onPressed: () {
-//                   Navigator.push(
-//                     context,
-//                     MaterialPageRoute(builder: (_) => DonationFormScreen(category: category)),
-//                   );
-//                 },
-//                 child: Text("Donate Now"),
-//               ),
-//             ),
-//             );
-//          },
-          
-        
-      
-    
-//   }
-
-
-// import 'package:flutter/material.dart';
-// import 'donation_form_screen.dart';
-
-// class CategoryDetailsScreen extends StatelessWidget {
-//   final String category;
-
-//   CategoryDetailsScreen({required this.category});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(
-//           category, // shows the selected category name
-//           style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-//         ),
-//         backgroundColor: Colors.blueAccent,
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(20.0),
-//         child: Column(
-//           children: [
-//             const Spacer(),
-//             SizedBox(
-//               width: double.infinity,
-//               child: ElevatedButton(
-//                 onPressed: () {
-//                   Navigator.push(
-//                     context,
-//                     MaterialPageRoute(
-//                       builder: (_) => DonationFormScreen(category: category),
-//                     ),
-//                   );
-//                 },
-//                 style: ElevatedButton.styleFrom(
-//                   backgroundColor: Colors.blueAccent,
-//                   padding: const EdgeInsets.symmetric(vertical: 16),
-//                   shape: RoundedRectangleBorder(
-//                     borderRadius: BorderRadius.circular(10),
-//                   ),
-//                 ),
-//                 child: const Text(
-//                   "Donate Now",
-//                   style: TextStyle(fontSize: 18),
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
 import 'package:online_donation_app/views/donation_screen.dart';
-import 'donation_form_screen.dart';
 
 class CategoryDetailsScreen extends StatelessWidget {
   final String category;
@@ -114,7 +7,7 @@ class CategoryDetailsScreen extends StatelessWidget {
   CategoryDetailsScreen({required this.category});
 
   final Map<String, String> categoryImages = {
-    'Education': 'assets/education.jpg',
+    'Education': 'assets/education.jpg', 
     'Healthcare': 'assets/medical.jpg',
     'Disaster Relief': 'assets/disaster.jpeg',
     'Community Support': 'assets/community.jpg',
@@ -148,11 +41,10 @@ class CategoryDetailsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.only(bottom: 80), // Give space for button
+          padding: const EdgeInsets.only(bottom: 80), 
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Top image
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.4,
                 width: double.infinity,
@@ -161,7 +53,6 @@ class CategoryDetailsScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              // Description
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -187,8 +78,6 @@ class CategoryDetailsScreen extends StatelessWidget {
           ),
         ),
       ),
-
-      // Fixed bottom button
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SizedBox(

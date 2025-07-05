@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     final user = await AuthService().login(
       _emailController.text.trim(),
       _passwordController.text.trim(),
-        context,  // Add context as the 4th argument
+        context,  
     );
     if (user != null) {
       Navigator.pushReplacementNamed(context, '/home');
