@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:online_donation_app/providers/payment_provider.dart';
 import 'package:online_donation_app/providers/user_provider.dart';
 import 'package:online_donation_app/services/local_storage_service.dart';
+import 'package:online_donation_app/services/notification_service.dart';
 import 'package:online_donation_app/views/home_screen.dart';
 import 'package:online_donation_app/views/onboarding_screen1.dart';
 import 'package:online_donation_app/views/onboarding_screen2.dart';
@@ -13,6 +14,8 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+  await NotificationService().initNotifications();
   bool isOnboardingDone = await LocalStorageService.isOnboardingDone();
 
   runApp(MyApp(isOnboardingDone: isOnboardingDone));

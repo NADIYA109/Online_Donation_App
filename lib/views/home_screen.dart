@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
             Text(
               "Welcome, $userName!",
               style: const TextStyle(
-                fontSize: 28,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
             const Text(
               "Donation Categories",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.w600,
                 color: Colors.blueGrey,
               ),
@@ -112,16 +112,16 @@ class HomeScreen extends StatelessWidget {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt),
-            label: 'Donations',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.notifications),
+            label: 'Updates',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'History',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
         onTap: (index) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_donation_app/services/notification_service.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -52,6 +53,9 @@ class PaymentService {
       'paymentId': response.paymentId,
       'status': 'success',
     });
+
+  
+  await NotificationService().showLocalThankYou();
 
     Navigator.pushAndRemoveUntil(
       context,

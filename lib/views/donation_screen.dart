@@ -45,7 +45,6 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      // Navigate to payment screen or process payment
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Proceeding to Payment...')),
       );
