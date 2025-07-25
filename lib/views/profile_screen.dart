@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:online_donation_app/views/myprofile.dart';
 import 'package:online_donation_app/views/signin_screen.dart';
 
 class ProfileScreen extends StatelessWidget{
@@ -45,6 +46,8 @@ class ProfileScreen extends StatelessWidget{
                 leading: Icon(Icons.person),
                 title: Text("My Profile"),
                 onTap: (){
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (_) => Myprofile()));
 
                 },
               ),
