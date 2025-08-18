@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_donation_app/providers/user_provider.dart';
+import 'package:online_donation_app/views/history_screen.dart';
 import 'package:online_donation_app/views/profile_screen.dart';
 import 'package:provider/provider.dart';
 import 'category_details_screen.dart';
@@ -122,7 +123,9 @@ class _HomeScreenState extends State<HomeScreen> {
           const Center(child: Text('Updates Screen')),
 
           
-          const Center(child: Text('History Screen')),
+          //const Center(child: Text('History Screen')),
+
+          DonationHistoryScreen(),
 
          
            ProfileScreen(),
