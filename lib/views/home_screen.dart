@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_donation_app/providers/user_provider.dart';
 import 'package:online_donation_app/views/history_screen.dart';
 import 'package:online_donation_app/views/profile_screen.dart';
+import 'package:online_donation_app/views/updates_screen.dart';
 import 'package:provider/provider.dart';
 import 'category_details_screen.dart';
 
@@ -31,14 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Online Donation"),
         backgroundColor: Colors.blueAccent,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout, color: Colors.white),
-            onPressed: () {
-              print("User logged out");
-            },
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: const Icon(Icons.logout, color: Colors.white),
+        //     onPressed: () {
+        //       print("User logged out");
+        //     },
+        //   ),
+        // ],
       ),
 
       body: IndexedStack(
@@ -119,16 +120,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-        
-          const Center(child: Text('Updates Screen')),
+        UpdatesScreen(),
 
-          
-          //const Center(child: Text('History Screen')),
+        DonationHistoryScreen(),
 
-          DonationHistoryScreen(),
-
-         
-           ProfileScreen(),
+        ProfileScreen(),
         ],
       ),
 

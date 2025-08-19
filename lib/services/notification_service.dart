@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class NotificationService {
   final FirebaseMessaging _messaging = FirebaseMessaging.instance;
@@ -70,5 +71,20 @@ class NotificationService {
       'Your donation has been received successfully.',
       notificationDetails,
     );
+
+  // 2Save the same notification to Firestore (string date & time)
+  final user = FirebaseAuth.instance.currentUser;
+  final now = DateTime.now();
+  final date = DateFormat('dd-MM-yyyy').format(now);
+  final time = DateFormat('hh:mm a').format(now);
+
+  await FirebaseFirestore.instance.collection('notifications').add({
+    'title': 'Thank You!',
+    'body': 'Your donation has been received successfully.',
+    'type': 'payment',
+    'date': date,
+    'time': time,
+    'recipients': [user?.email],
+  });
   }
 }
