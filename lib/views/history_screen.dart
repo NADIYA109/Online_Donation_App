@@ -35,7 +35,7 @@ class DonationHistoryScreen extends StatelessWidget {
 
           if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
             return const Center(
-              child: Text(
+              child: Text(  
                 "No donations found.",
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),

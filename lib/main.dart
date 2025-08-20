@@ -9,6 +9,7 @@ import 'package:online_donation_app/views/onboarding_screen1.dart';
 import 'package:online_donation_app/views/onboarding_screen2.dart';
 import 'package:online_donation_app/views/signin_screen.dart';
 import 'package:online_donation_app/views/signup_screen.dart';
+import 'package:online_donation_app/views/splash_screen.dart';
 import 'package:provider/provider.dart'; 
 
 void main() async {
@@ -37,8 +38,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Online Donation App',
         theme: ThemeData(primarySwatch: Colors.blue),
-        initialRoute: isOnboardingDone ? '/login' : '/onboarding1',
+        //initialRoute: isOnboardingDone ? '/login' : '/onboarding1',
+        initialRoute: isOnboardingDone ? '/splash' : '/onboarding1',
         routes: {
+          '/splash' : (context) => SplashScreen(),
           '/login': (context) => LoginScreen(),
           '/signup': (context) => SignUpScreen(),
           '/home': (context) => HomeScreen(),
