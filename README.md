@@ -20,6 +20,8 @@ The app provides a smooth and secure way for users to register, log in, make don
 - **Push Notifications (FCM)** - Get notified about updates
   
 - **Local Notifications** - Shown after a successful donation
+
+-  **User Profile:** - Users can view and update their profile information.
   
 
 ## Tech Stack
@@ -31,7 +33,6 @@ The app provides a smooth and secure way for users to register, log in, make don
    
 - **Payment Gateway:** Razorpay
 
--  **User Profile:** Users can view and update their profile information.
 
 
 
