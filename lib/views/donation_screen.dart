@@ -72,7 +72,14 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
                // Full Name
               TextFormField(
                 controller: _nameController,
-                decoration: InputDecoration(labelText: 'Full Name'),
+                decoration: InputDecoration(
+                  labelText: 'Full Name',
+                  labelStyle: TextStyle(color: Colors.black),   
+                  focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black), 
+                  ),
+                  ),
+                
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
                     return 'Please enter your full name';
@@ -85,7 +92,13 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
               // Email
               TextFormField(
                 controller: _emailController,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(color: Colors.black),   
+                  focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black), 
+                  ),
+                  ),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
@@ -102,7 +115,13 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
               // Phone Number
               TextFormField(
                 controller: _phoneController,
-                decoration: InputDecoration(labelText: 'Phone Number'),
+                decoration: InputDecoration(
+                  labelText: 'Phone Number',
+                  labelStyle: TextStyle(color: Colors.black),   
+                  focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black), 
+                  ),
+                  ),
                 keyboardType: TextInputType.phone,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
@@ -119,7 +138,11 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
               // Donation Amount
               TextFormField(
                 controller: _amountController,
-                decoration: InputDecoration(labelText: 'Donation Amount (₹)', prefixText: '₹ ',),
+                decoration: InputDecoration(labelText: 'Donation Amount (₹)', prefixText: '₹ ',
+                labelStyle: TextStyle(color: Colors.black),  
+                focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Colors.black), 
+                ),),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.trim().isEmpty) {
@@ -136,7 +159,12 @@ class _DonationFormScreenState extends State<DonationFormScreen> {
               // Message (optional)
               TextFormField(
                 controller: _messageController,
-                decoration: InputDecoration(labelText: 'Message (optional)'),
+                decoration: InputDecoration(
+                  labelText: 'Message (optional)',
+                  labelStyle: TextStyle(color: Colors.black),   
+                  focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: Colors.black), 
+                  ),),
                 maxLines: 3,
               ),
               const SizedBox(height: 16),

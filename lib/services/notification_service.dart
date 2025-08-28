@@ -72,7 +72,7 @@ class NotificationService {
       notificationDetails,
     );
 
-  // 2Save the same notification to Firestore (string date & time)
+  // Save the same notification to Firestore (string date & time)
   final user = FirebaseAuth.instance.currentUser;
   final now = DateTime.now();
   final date = DateFormat('dd-MM-yyyy').format(now);

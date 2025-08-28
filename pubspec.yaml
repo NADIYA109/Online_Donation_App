@@ -41,15 +41,20 @@ dependencies:
   shared_preferences: ^2.5.3
   intl: ^0.20.2
   razorpay_flutter: ^1.4.0
+  #flutter_razorpay_web: ^0.0.3
+  #razorpay_web: ^3.0.0
   cloud_firestore: ^5.6.11
   # firebase_core: ^3.15.1
   firebase_messaging: ^15.2.9
   flutter_local_notifications: ^19.3.0
   image_picker: ^1.1.2
 
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+ 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

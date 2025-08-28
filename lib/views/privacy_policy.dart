@@ -18,13 +18,13 @@ class PrivacyPolicyScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 "Privacy Policy",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                 "We respect your privacy and are committed to protecting the personal information you share with us. "
                 "This Privacy Policy outlines how we collect, use, and safeguard your data when you use our application.\n\n"
                 "1. Information We Collect:\n"
@@ -53,9 +53,17 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "We may update this policy from time to time. We will notify you of any significant changes "
                 "through the app or via email.\n\n"
                 "By using our application, you agree to this Privacy Policy. If you do not agree, please discontinue using the app.\n\n"
-                "Contact Us:\n"
-                "If you have any questions or concerns about this Privacy Policy, please contact us at support@onlinedonation.com.",
+                "Contact Us:",
                 style: TextStyle(fontSize: 16, height: 1.5),
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                "support@onlinedonation.com",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black, 
+                ),
               ),
             ],
           ),

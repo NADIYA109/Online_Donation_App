@@ -34,11 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
               color: Color(0xFF2196F3), 
             ),
             SizedBox(height: 16),
-            // App Name
             Text(
               "Online Donation App",
               style: TextStyle(
-                fontSize: 22,
+                fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
@@ -47,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Making a difference...",
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 color: Colors.grey,
               ),
             ),
